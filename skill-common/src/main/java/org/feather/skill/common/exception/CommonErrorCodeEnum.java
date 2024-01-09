@@ -79,7 +79,7 @@ public enum CommonErrorCodeEnum  implements BaseErrorCodeEnum{
     SERVER_ILLEGAL_ARGUMENT_ERROR(2001, "业务方法参数检查不通过"),
     ;
 
-    private Integer errorCode;
+    private final Integer errorCode;
 
-    private String errorMsg;
+    private final  String errorMsg;
 }

@@ -35,7 +35,7 @@ public class FeatherResponse<T> implements Serializable {
     /**
      * 默认错误码
      */
-    private static final Integer DEFAULT_ERROR_CODE = 500;
+    private static final Integer DEFAULT_ERROR_CODE = -1;
 
     public FeatherResponse(Integer code, String message) {
         this.code = code;
