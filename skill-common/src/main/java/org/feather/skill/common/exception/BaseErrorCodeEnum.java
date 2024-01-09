@@ -1,0 +1,16 @@
+package org.feather.skill.common.exception;
+
+/**
+ * @projectName: skill
+ * @package: org.feather.skill.common.exception
+ * @className: BaseErrorCode
+ * @author: feather
+ * @description:
+ * @since: 09-Jan-24 10:29 PM
+ * @version: 1.0
+ */
+public interface BaseErrorCodeEnum {
+    Integer getErrorCode();
+
+    String getErrorMsg();
+}
