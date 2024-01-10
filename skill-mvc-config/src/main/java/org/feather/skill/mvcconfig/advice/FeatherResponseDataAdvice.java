@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * @package: org.feather.skill.mvcconfig.advice
  * @className: FeatherResponseDataAdvice
  * @author: feather
- * @description:
+ * @description: 实现统一响应
  * @since: 10-Jan-24 1:24 PM
  * @version: 1.0
  */

@@ -10,6 +10,7 @@
     <modules>
         <module>skill-common</module>
         <module>skill-mvc-config</module>
+        <module>skill-alibaba-nacos-client</module>
     </modules>
 
     <parent>
