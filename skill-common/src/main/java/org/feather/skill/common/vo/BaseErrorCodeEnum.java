@@ -1,4 +1,4 @@
-package org.feather.skill.common.exception;
+package org.feather.skill.common.vo;
 
 /**
  * @projectName: skill

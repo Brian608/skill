@@ -1,7 +1,8 @@
-package org.feather.skill.common.exception;
+package org.feather.skill.mvcconfig.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.feather.skill.common.vo.BaseErrorCodeEnum;
 
 /**
  * @projectName: skill
@@ -14,7 +15,7 @@ import lombok.Getter;
  */
 @AllArgsConstructor
 @Getter
-public enum CommonErrorCodeEnum  implements BaseErrorCodeEnum{
+public enum CommonErrorCodeEnum  implements BaseErrorCodeEnum {
     // =========== 系统级别未知异常 =========
 
     /**

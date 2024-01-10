@@ -1,8 +1,9 @@
-package org.feather.skill.common.exception;
+package org.feather.skill.mvcconfig.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.feather.skill.common.constants.CoreConstant;
+import org.feather.skill.common.vo.BaseErrorCodeEnum;
 
 import java.text.MessageFormat;
 

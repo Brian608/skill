@@ -1,4 +1,4 @@
-package org.feather.skill.common.exception;
+package org.feather.skill.mvcconfig.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.feather.skill.common.vo.FeatherResponse;
