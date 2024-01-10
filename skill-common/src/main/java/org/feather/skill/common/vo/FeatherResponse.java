@@ -3,6 +3,7 @@ package org.feather.skill.common.vo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.feather.skill.common.constants.CoreConstant;
 import org.feather.skill.common.exception.BaseErrorCodeEnum;
 
 import java.io.Serializable;
@@ -24,7 +25,7 @@ public class FeatherResponse<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /** 错误码 */
-    private Integer code;
+    private String code;
 
     /** 错误消息 */
     private String message;
@@ -32,12 +33,8 @@ public class FeatherResponse<T> implements Serializable {
     /** 泛型响应数据 */
     private T Data;
 
-    /**
-     * 默认错误码
-     */
-    private static final Integer DEFAULT_ERROR_CODE = -1;
 
-    public FeatherResponse(Integer code, String message) {
+    public FeatherResponse(String code, String message) {
         this.code = code;
         this.message = message;
     }
@@ -70,7 +67,7 @@ public class FeatherResponse<T> implements Serializable {
      * @since: 09-Jan-24 10:42 PM
      **/
     public static <T> FeatherResponse<T> fail(String errorMsg) {
-        return new FeatherResponse<>( DEFAULT_ERROR_CODE, errorMsg,null);
+        return new FeatherResponse<>( CoreConstant.DEFAULT_ERROR_CODE, errorMsg,null);
     }
 
     /**
@@ -81,7 +78,7 @@ public class FeatherResponse<T> implements Serializable {
      * @author: feather
      * @since: 09-Jan-24 10:43 PM
      **/
-    public static <T> FeatherResponse<T> fail(Integer errorCode, String errorMsg) {
+    public static <T> FeatherResponse<T> fail(String errorCode, String errorMsg) {
         return new FeatherResponse<>( errorCode, errorMsg,null);
     }
 

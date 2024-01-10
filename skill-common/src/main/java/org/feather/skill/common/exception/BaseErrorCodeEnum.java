@@ -10,7 +10,7 @@ package org.feather.skill.common.exception;
  * @version: 1.0
  */
 public interface BaseErrorCodeEnum {
-    Integer getErrorCode();
+    String getErrorCode();
 
     String getErrorMsg();
 }
