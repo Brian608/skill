@@ -1,4 +1,4 @@
-package org.feather.skill.common.vo;
+package org.feather.skill.common.enums;
 
 /**
  * @projectName: skill

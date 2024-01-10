@@ -1,8 +1,7 @@
-package org.feather.skill.mvcconfig.exception;
+package org.feather.skill.common.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.feather.skill.common.vo.BaseErrorCodeEnum;
 
 /**
  * @projectName: skill

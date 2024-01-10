@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.feather.skill.common.constants.CoreConstant;
+import org.feather.skill.common.enums.BaseErrorCodeEnum;
 
 import java.io.Serializable;
 

@@ -1,6 +1,7 @@
 package org.feather.skill.mvcconfig.exception;
 
 import lombok.extern.slf4j.Slf4j;
+import org.feather.skill.common.enums.CommonErrorCodeEnum;
 import org.feather.skill.common.vo.FeatherResponse;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.converter.HttpMessageNotReadableException;
