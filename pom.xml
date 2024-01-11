@@ -11,6 +11,7 @@
         <module>skill-common</module>
         <module>skill-mvc-config</module>
         <module>skill-alibaba-nacos-client</module>
+        <module>skill-admin</module>
     </modules>
 
     <parent>
@@ -22,6 +23,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- Spring Cloud Hoxton.SR8 依赖 -->
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
         <!-- spring cloud alibaba 依赖 -->
