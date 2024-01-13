@@ -1,4 +1,4 @@
-package org.feather.admin;
+package org.feather.skill.admin;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import lombok.extern.slf4j.Slf4j;

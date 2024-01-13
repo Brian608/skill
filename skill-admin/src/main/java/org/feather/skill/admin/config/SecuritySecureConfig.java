@@ -1,4 +1,4 @@
-package org.feather.admin.config;
+package org.feather.skill.admin.config;
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;
 import org.springframework.context.annotation.Configuration;

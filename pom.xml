@@ -12,6 +12,8 @@
         <module>skill-mvc-config</module>
         <module>skill-alibaba-nacos-client</module>
         <module>skill-admin</module>
+        <module>skill-authority-center</module>
+        <module>skill-generator</module>
     </modules>
 
     <parent>
@@ -61,6 +63,13 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.6.0</version>
+        </dependency>
+        <!-- MySQL 驱动, 注意, 这个需要与 MySQL 版本对应 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.12</version>
+            <scope>runtime</scope>
         </dependency>
         <!-- 引入jwt-->
         <dependency>

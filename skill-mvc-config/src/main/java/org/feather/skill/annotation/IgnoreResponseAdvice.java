@@ -1,4 +1,4 @@
-package org.feather.skill.mvcconfig.annotation;
+package org.feather.skill.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

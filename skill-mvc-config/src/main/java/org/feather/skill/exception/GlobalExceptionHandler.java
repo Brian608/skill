@@ -1,4 +1,4 @@
-package org.feather.skill.mvcconfig.exception;
+package org.feather.skill.exception;
 
 import lombok.extern.slf4j.Slf4j;
 import org.feather.skill.common.enums.CommonErrorCodeEnum;

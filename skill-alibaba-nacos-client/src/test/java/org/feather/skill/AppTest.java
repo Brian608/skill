@@ -1,4 +1,4 @@
-package org.feather;
+package org.feather.skill;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package org.feather.skill.mvcconfig.exception;
+package org.feather.skill.exception;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

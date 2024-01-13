@@ -1,7 +1,7 @@
-package org.feather.skill.mvcconfig.advice;
+package org.feather.skill.advice;
 
 import org.feather.skill.common.vo.FeatherResponse;
-import org.feather.skill.mvcconfig.annotation.IgnoreResponseAdvice;
+import org.feather.skill.annotation.IgnoreResponseAdvice;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;

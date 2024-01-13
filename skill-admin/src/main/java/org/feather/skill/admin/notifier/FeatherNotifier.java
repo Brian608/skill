@@ -1,4 +1,4 @@
-package org.feather.admin.notifier;
+package org.feather.skill.admin.notifier;
 
 import de.codecentric.boot.admin.server.domain.entities.Instance;
 import de.codecentric.boot.admin.server.domain.entities.InstanceRepository;
