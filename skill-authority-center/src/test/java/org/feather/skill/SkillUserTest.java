@@ -1,5 +1,6 @@
 package org.feather.skill;
 
+import cn.hutool.crypto.digest.MD5;
 import lombok.extern.slf4j.Slf4j;
 import org.feather.skill.domain.AddUserRequest;
 import org.feather.skill.service.ISkillUserService;
@@ -36,7 +37,7 @@ public class SkillUserTest {
     public void  saveUser(){
         AddUserRequest addUserRequest =new AddUserRequest();
         addUserRequest.setUsername("feather");
-        addUserRequest.setPassword("123456");
+        addUserRequest.setPassword(MD5.create().digestHex("123456"));
         log.info("save user result :[{}]",skillUserService.saveUser(addUserRequest)) ;
     }
 
