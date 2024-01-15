@@ -1,4 +1,4 @@
-package org.feather.skill.domain;
+package org.feather.skill.domain.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

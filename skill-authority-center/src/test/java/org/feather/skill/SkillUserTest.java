@@ -2,7 +2,7 @@ package org.feather.skill;
 
 import cn.hutool.crypto.digest.MD5;
 import lombok.extern.slf4j.Slf4j;
-import org.feather.skill.domain.AddUserRequest;
+import org.feather.skill.domain.request.AddUserRequest;
 import org.feather.skill.service.ISkillUserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -14,6 +14,7 @@
         <module>skill-admin</module>
         <module>skill-authority-center</module>
         <module>skill-generator</module>
+        <module>skill-gateway</module>
     </modules>
 
     <parent>

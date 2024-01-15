@@ -2,7 +2,7 @@ package org.feather.skill.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.feather.skill.common.vo.UserNameAndPassword;
-import org.feather.skill.domain.AddUserRequest;
+import org.feather.skill.domain.request.AddUserRequest;
 import org.feather.skill.entity.SkillUser;
 
 /**

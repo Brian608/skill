@@ -11,9 +11,7 @@ import org.feather.skill.common.utils.RandomUtil;
 import org.feather.skill.common.vo.LoginUserInfo;
 import org.feather.skill.common.vo.UserNameAndPassword;
 import org.feather.skill.constants.AuthorityConstant;
-import org.feather.skill.domain.AddUserRequest;
 import org.feather.skill.entity.SkillUser;
-import org.feather.skill.mapper.SkillUserMapper;
 import org.feather.skill.service.IJWTService;
 import org.feather.skill.service.ISkillUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +25,6 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
@@ -69,7 +66,7 @@ public class JWTServiceImpl implements IJWTService {
             expire = AuthorityConstant.DEFAULT_EXPIRE_DAY;
         }
         //计算超时
-        ZonedDateTime zdt = LocalDate.now().plus(expire, ChronoUnit.DAYS)
+        ZonedDateTime zdt = LocalDate.now().plusDays(expire)
                 .atStartOfDay(ZoneId.systemDefault());
         Date expireDate = Date.from(zdt.toInstant());
 

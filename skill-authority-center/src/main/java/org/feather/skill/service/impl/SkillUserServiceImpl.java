@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.feather.skill.common.utils.RandomUtil;
 import org.feather.skill.common.vo.UserNameAndPassword;
-import org.feather.skill.domain.AddUserRequest;
+import org.feather.skill.domain.request.AddUserRequest;
 import org.feather.skill.entity.SkillUser;
 import org.feather.skill.mapper.SkillUserMapper;
 import org.feather.skill.service.ISkillUserService;
