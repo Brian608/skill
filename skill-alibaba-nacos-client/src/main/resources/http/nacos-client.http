@@ -1,3 +1,8 @@
 ### 查询服务实例信息
 GET http://127.0.0.1:8000/skill-nacos-client/nacos-client/service-instance
 Accept: application/json
+### 查看 Sleuth 跟踪信息
+GET http://127.0.0.1:9001/feather/skill-nacos-client/sleuth/trace-info
+Accept: application/json
+skill-feather-user: eyJhbGciOiJSUzI1NiJ9.eyJza2lsbC1mZWF0aGVyLXVzZXIiOiJ7XCJpZFwiOjE2LFwidXNlcm5hbWVcIjpcImZlYXRoZXJcIn0iLCJqdGkiOiIyNGRlYzQxYS1kNzhkLTRhMDMtOTI4NC0wMWUzZWY4OTIxMTAiLCJleHAiOjE3MDU4NTI4MDB9.K3mrZO769HAC4ziMOoDT4E3_tcLnqNYU66-s8NsJAwSgCkEDeBQ_qHOtO-T-HztZ9LydoG0VLVk3FrrDW7G559zXrbb2JfBjgI74LniFqdARcgbfteiebY6aldIh45qT1i3Fblu-ehDEPCQWMbnJH_aEFXmJc-jBoF0U8LkiC_LI91tkFTWEdLKug47ZGPhdM8pmvZ3dZUx74WU-AmbxcZTZDVRRX1z92eBUrzXR1bhCqOJcPDEcKOcnh_8BlKU4_R9sAya0ohGj115ReUn0siqkVjokzGATvowqAWX8xoLNyfwgNce-mVCAJtLGXXaR5yMXaEPioWc7lBYkztqe7g
+token: feather

@@ -30,7 +30,14 @@ spring cloud gateway 路由常用的三种配置方式
 1：在代码中注入RouterLocatorBean 并手工编写配置路由定义
 2：在application.yml bootstrap.yml 等配置文件中配置spring.cloud.gateway
 3：通过配置中心 (nacos) 实现动态的路由配置
-
+## 7：sleuth+zipkin 分布式日志链路追踪
+为了实现请求追踪，当请求发送到分布式系统的入口端点时，只需要服务跟踪框架为该请求创建一个唯一的跟踪请求，trace ID
+为了统计各处理单元的时间延迟，当请求到达各个服务组件时，或是处理逻辑到达某个状态时，也通过一个唯一标识来标记他的开始，具体过程以及结束，Span ID
+zipkin 解决微服务架构中延迟问题，包括数据的收集，存储，查找和展现
+1：collector：收集器组件
+2：Storage ：存储组件
+3：API ：RESTFUL API 提供外部访问接口
+4 UI：WebUi 提供可视化查询页面
 
 
 
