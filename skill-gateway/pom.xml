@@ -36,15 +36,17 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
         <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-sleuth-zipkin-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>2.5.0.RELEASE</version>
-        </dependency>
+<!--        分布式日志配置start-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.kafka</groupId>-->
+<!--            <artifactId>spring-kafka</artifactId>-->
+<!--            <version>2.5.0.RELEASE</version>-->
+<!--        </dependency>-->
+        <!--        分布式日志配置end-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>

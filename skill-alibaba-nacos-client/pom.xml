@@ -22,15 +22,17 @@
             <version>2.2.3.RELEASE</version>
         </dependency>
         <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-sleuth-zipkin-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-zipkin</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
-            <version>2.5.0.RELEASE</version>
-        </dependency>
+        <!--        分布式日志配置start-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-zipkin</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.kafka</groupId>-->
+        <!--            <artifactId>spring-kafka</artifactId>-->
+        <!--            <version>2.5.0.RELEASE</version>-->
+        <!--        </dependency>-->
+        <!--        分布式日志配置end-->
         <dependency>
             <groupId>org.feather</groupId>
             <artifactId>skill-mvc-config</artifactId>
