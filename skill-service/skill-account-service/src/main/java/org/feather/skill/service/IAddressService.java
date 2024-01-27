@@ -5,6 +5,8 @@ import org.feather.skill.account.AddressInfo;
 import org.feather.skill.common.TableId;
 import org.feather.skill.entity.Address;
 
+import java.util.List;
+
 /**
  * <p>
  * 用户地址表 服务类
@@ -16,13 +18,22 @@ import org.feather.skill.entity.Address;
 public interface IAddressService extends IService<Address> {
 
     /**
+     * description: 根据用户id 获取用户地址信息
+     * @param userId 用户id
+     * @return {@link List<Address>}
+     * @author: feather
+     * @since: 2024-01-27 18:08
+     **/
+    List<Address> findAllByUserId(Long userId);
+
+    /**
      * description:  创建用户地址信息
      * @param addressInfo 创建地址信息对象
-     * @return {@link TableId}
+     * @return {@link Boolean}
      * @author: feather
      * @since: 2024-01-27 17:25
      **/
-    TableId  createAddressInfo(AddressInfo addressInfo);
+    Boolean  createAddressInfo(AddressInfo addressInfo);
 
     /**
      * description: 获取当前用户地址信息

@@ -1,6 +1,7 @@
 package org.feather.skill.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 import org.feather.skill.entity.Balance;
 
 /**
@@ -11,6 +12,7 @@ import org.feather.skill.entity.Balance;
  * @author feather
  * @since 2024-01-25
  */
+@Mapper
 public interface BalanceMapper extends BaseMapper<Balance> {
 
 }
