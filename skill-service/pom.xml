@@ -13,6 +13,8 @@
 
     <modules>
         <module>skill-service-config</module>
+        <module>skill-account-service</module>
+        <module>skill-service-sdk</module>
     </modules>
 
 

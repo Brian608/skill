@@ -23,31 +23,13 @@ import java.net.UnknownHostException;
 @EnableDiscoveryClient
 @SpringBootApplication
 public class NacosClientApplication {
-    public static void main(String[] args) throws UnknownHostException {
+    public static void main(String[] args) {
         SpringApplication app = new SpringApplication(NacosClientApplication.class);
         Environment env = app.run(args).getEnvironment();
         String applicationName = env.getProperty("spring.application.name");
-        String serverPort = env.getProperty("server.port");
-        String contextPath = env.getProperty("server.servlet.context-path");
-
-
-        contextPath = (contextPath == null || contextPath.trim().isEmpty() || "/".equals(contextPath)) ? "" : StringUtils.stripEnd(contextPath, "/");
-
-        String localUrl = String.format("http://localhost:%s%s", serverPort, contextPath);
-        String externalUrl = String.format("http://%s:%s%s", InetAddress.getLocalHost().getHostAddress(), serverPort, contextPath);
-        String docUrl = String.format("http://%s:%s%s/doc.html", InetAddress.getLocalHost().getHostAddress(), serverPort, contextPath);
-
         log.info("\n----------------------------------------------------------\n\t" +
-                        "Application '{}' is running! Access URLs:\n\t" +
-                        "Local: \t\t{}\n\t" +
-                        "External: \t{}\n\t"+
-                        "Doc: \t{}\n"+
-                        "----------------------------------------------------------",
-                applicationName,
-                localUrl,
-                externalUrl,
-                docUrl);
-
-
+                        "Application '{}' is running! \n\t"+
+                        "--------------------------------------------------------------",
+                applicationName);
     }
 }
