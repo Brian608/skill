@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.feather.skill.mapper.GoodsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="org.feather.skill.entity.Goods">
+        <id column="id" property="id" />
+        <result column="goods_category" property="goodsCategory" />
+        <result column="brand_category" property="brandCategory" />
+        <result column="goods_name" property="goodsName" />
+        <result column="goods_pic" property="goodsPic" />
+        <result column="goods_description" property="goodsDescription" />
+        <result column="goods_status" property="goodsStatus" />
+        <result column="price" property="price" />
+        <result column="supply" property="supply" />
+        <result column="inventory" property="inventory" />
+        <result column="goods_property" property="goodsProperty" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, goods_category, brand_category, goods_name, goods_pic, goods_description, goods_status, price, supply, inventory, goods_property, create_time, update_time
+    </sql>
+
+</mapper>

@@ -101,6 +101,6 @@ public class CodeGenerator {
     }
 
     public static void main(String[] args) {
-        generator("balance");
+        generator("goods");
     }
 }
