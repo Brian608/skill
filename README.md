@@ -38,6 +38,9 @@ zipkin 解决微服务架构中延迟问题，包括数据的收集，存储，�
 2：Storage ：存储组件
 3：API ：RESTFUL API 提供外部访问接口
 4 UI：WebUi 提供可视化查询页面
+## 8 SpringCloudSleuth+Zipkin+kafka 分布式日志收集
+## 9 账户微服务
+![账户微服务.png](doc%2F%D5%CB%BB%A7%CE%A2%B7%FE%CE%F1.png)
 
 
 

@@ -31,4 +31,13 @@ public interface IBalanceService extends IService<Balance> {
      **/
     BalanceInfo deductBalance(BalanceInfo balanceInfo);
 
+    /**
+     * description: 通过用户id查询余额信息
+     * @param userId 用户id
+     * @return {@link Balance}
+     * @author: feather
+     * @since: 2024-01-28 09:07
+     **/
+    Balance findByUserId(Long userId);
+
 }

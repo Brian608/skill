@@ -45,7 +45,7 @@ public class FeatherResponse<T> implements Serializable {
      * @since: 09-Jan-24 10:42 PM
      **/
     public static <T> FeatherResponse<T> success() {
-        return new FeatherResponse<>( null, null, null);
+        return new FeatherResponse<>( CoreConstant.DEFAULT_SUCCESS_CODE, CoreConstant.DEFAULT_SUCCESS_MESSAGE ,null);
     }
 
    /**
@@ -56,7 +56,7 @@ public class FeatherResponse<T> implements Serializable {
     * @since: 09-Jan-24 10:42 PM
     **/
     public static <T> FeatherResponse<T> success(T data) {
-        return new FeatherResponse<>( null, null, data);
+        return new FeatherResponse<>( CoreConstant.DEFAULT_SUCCESS_CODE, CoreConstant.DEFAULT_SUCCESS_MESSAGE, data);
     }
 
     /**

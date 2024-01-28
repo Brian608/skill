@@ -1,0 +1,43 @@
+### 创建用户地址信息
+POST http://127.0.0.1:9001/feather/skill-account-service/address/create-address
+Content-Type: application/json
+skill-feather-user: eyJhbGciOiJSUzI1NiJ9.eyJza2lsbC1mZWF0aGVyLXVzZXIiOiJ7XCJpZFwiOjE2LFwidXNlcm5hbWVcIjpcImZlYXRoZXJcIn0iLCJqdGkiOiIzNDRhMmJhNy04M2RjLTQ1OGEtYjE3Zi1hMjAxYjdiM2I4OTEiLCJleHAiOjE3MDY0NTc2MDB9.K6G_PdfthCanOfYqa-vNihxpTe3-_lxMhFzzMsN1WsLW6MQ8mERg65eOokXzJmwYIteL7pK80_jqQ4cGj0aelqszebmXnmPSb4bo1IXh3mmcv9KMdthSs6mRvJzS5LFKxJ-8_ESQOvNhTXHEQiZZQsINkbmJQPDXh-7WY_ucw7TiHmNxW-nai4zsuPzuHzRKVugWabkGkmHXTkA0aofWqmA4ejpmj4e089bieeNggALAMM7KBcd0FGP2JPc0GXhivjUPbX3EensHQn9ITD37C9A1TxozYg2n0d47af8-fpJu87N_gKwa_n7bQk1iRrmPvOcM_MqxZfupT3UdVIa-xw
+
+{
+  "userId": 22,
+  "addressItems": [
+    {
+      "username": "feather666",
+      "phone": "16600000001",
+      "province": "上海市",
+      "city": "上海市",
+      "addressDetail": "闵行区"
+    }
+  ]
+}
+
+### 当前登录用户地址信息
+GET http://127.0.0.1:9001/feather/skill-account-service/address/current-address
+Accept: application/json
+skill-feather-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+### 通过 id 获取用户地址信息
+GET http://127.0.0.1:9001/feather/skill-account-service/address/address-info?id=11
+Accept: application/json
+skill-feather-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+### 获取用户地址信息
+POST http://127.0.0.1:9001/feather/skill-account-service/address/address-info-by-table-id
+Content-Type: application/json
+skill-feather-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+{
+  "ids": [
+    {
+      "id": 11
+    },
+    {
+      "id": 10
+    }
+  ]
+}

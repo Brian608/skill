@@ -10,7 +10,7 @@ import org.feather.skill.account.AddressInfo;
 import org.feather.skill.common.TableId;
 import org.feather.skill.common.vo.LoginUserInfo;
 import org.feather.skill.entity.Address;
-import org.feather.skill.enums.AddressErrorCodeEnums;
+import org.feather.skill.enums.AccountErrorCodeEnums;
 import org.feather.skill.exception.BusinessException;
 import org.feather.skill.filter.AccessContext;
 import org.feather.skill.mapper.AddressMapper;
@@ -70,7 +70,7 @@ public class  AddressServiceImpl extends ServiceImpl<AddressMapper, Address> imp
     public AddressInfo getAddressInfoById(Long id) {
         Address address = this.baseMapper.selectById(id);
         if (null==address){
-            throw  new BusinessException(AddressErrorCodeEnums.NOT_EXIST);
+            throw  new BusinessException(AccountErrorCodeEnums.ADDRESS_NOT_EXIST);
         }
         return new AddressInfo(address.getUserId(), Collections.singletonList(address.toAddressItem()));
     }

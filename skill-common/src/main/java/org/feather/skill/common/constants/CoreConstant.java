@@ -14,6 +14,14 @@ public interface CoreConstant {
     /**
      * 默认错误码
      */
-    String DEFAULT_ERROR_CODE = "-1";
+    String DEFAULT_ERROR_CODE = "500";
+    /**
+     * 默认成功码
+     */
+    String DEFAULT_SUCCESS_CODE = "200";
+    /**
+     * 默认成消息
+     */
+    String DEFAULT_SUCCESS_MESSAGE="success";
 
 }

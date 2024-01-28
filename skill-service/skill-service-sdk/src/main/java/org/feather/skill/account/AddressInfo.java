@@ -1,5 +1,6 @@
 package org.feather.skill.account;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -56,9 +57,11 @@ public class AddressInfo {
         @ApiModelProperty(value = "详细的地址")
         private String addressDetail;
 
+        @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Shanghai")
         @ApiModelProperty(value = "创建时间")
         private Date createTime;
 
+        @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "Asia/Shanghai")
         @ApiModelProperty(value = "更新时间")
         private Date updateTime;
 

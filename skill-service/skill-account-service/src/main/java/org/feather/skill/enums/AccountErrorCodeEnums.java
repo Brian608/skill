@@ -15,9 +15,11 @@ import org.feather.skill.common.enums.BaseErrorCodeEnum;
  */
 @Getter
 @AllArgsConstructor
-public enum AddressErrorCodeEnums implements BaseErrorCodeEnum {
+public enum AccountErrorCodeEnums implements BaseErrorCodeEnum {
 
-    NOT_EXIST("1000001","地址信息不存在");
+    ADDRESS_NOT_EXIST("1000001","地址信息不存在"),
+
+    BALANCE_IS_NOT_ENOUGH("1000002","账户余额不足"),
     ;
 
     private final String errorCode;
