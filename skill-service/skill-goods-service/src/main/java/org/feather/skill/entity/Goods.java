@@ -1,5 +1,6 @@
 package org.feather.skill.entity;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -7,9 +8,13 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.feather.skill.constant.BrandCategoryEnum;
+import org.feather.skill.constant.GoodsCategoryEnum;
+import org.feather.skill.constant.GoodsStatusEnum;
+import org.feather.skill.goods.GoodsInfo;
+import org.feather.skill.goods.SimpleGoodsInfo;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -98,6 +103,70 @@ public class Goods extends Model<Goods> {
     @Override
     protected Serializable pkVal() {
         return this.id;
+    }
+
+
+    /**
+     * <h2>将 GoodsInfo 转成实体对象</h2>
+     * */
+    public static Goods to(GoodsInfo goodsInfo) {
+
+        Goods goods = new Goods();
+
+        goods.setGoodsCategory(GoodsCategoryEnum.of(goodsInfo.getGoodsCategory()).getCode());
+        goods.setBrandCategory(BrandCategoryEnum.of(goodsInfo.getBrandCategory()).getCode());
+        goods.setGoodsName(goodsInfo.getGoodsName());
+        goods.setGoodsPic(goodsInfo.getGoodsPic());
+        goods.setGoodsDescription(goodsInfo.getGoodsDescription());
+        goods.setGoodsStatus(GoodsStatusEnum.ONLINE.getStatus());  // 可以增加一个审核的过程
+        goods.setPrice(goodsInfo.getPrice());
+        goods.setSupply(goodsInfo.getSupply());
+        goods.setInventory(goodsInfo.getInventory());
+        goods.setGoodsProperty(
+                JSON.toJSONString(goodsInfo.getGoodsProperty())
+        );
+
+        return goods;
+    }
+
+    /**
+     * <h2>将实体对象转成 GoodsInfo 对象</h2>
+     * */
+    public GoodsInfo toGoodsInfo() {
+
+        GoodsInfo goodsInfo = new GoodsInfo();
+
+        goodsInfo.setId(this.id);
+        goodsInfo.setGoodsCategory(this.goodsCategory);
+        goodsInfo.setBrandCategory(this.brandCategory);
+        goodsInfo.setGoodsName(this.goodsName);
+        goodsInfo.setGoodsPic(this.goodsPic);
+        goodsInfo.setGoodsDescription(this.goodsDescription);
+        goodsInfo.setGoodsStatus(this.goodsStatus);
+        goodsInfo.setPrice(this.price);
+        goodsInfo.setGoodsProperty(
+                JSON.parseObject(this.goodsProperty, GoodsInfo.GoodsProperty.class)
+        );
+        goodsInfo.setSupply(this.supply);
+        goodsInfo.setInventory(this.inventory);
+        goodsInfo.setCreateTime(this.createTime);
+        goodsInfo.setUpdateTime(this.updateTime);
+
+        return goodsInfo;
+    }
+
+    /**
+     * <h2>将实体对象转成 SimpleGoodsInfo 对象</h2>
+     * */
+    public SimpleGoodsInfo toSimple() {
+
+        SimpleGoodsInfo goodsInfo = new SimpleGoodsInfo();
+
+        goodsInfo.setId(this.id);
+        goodsInfo.setGoodsName(this.goodsName);
+        goodsInfo.setGoodsPic(this.goodsPic);
+        goodsInfo.setPrice(this.price);
+        return goodsInfo;
     }
 
 }
