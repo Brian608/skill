@@ -1,11 +1,14 @@
 package org.feather.skill.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.feather.skill.common.TableId;
 import org.feather.skill.entity.Goods;
 import org.feather.skill.goods.DeductGoodsInventory;
 import org.feather.skill.goods.GoodsInfo;
 import org.feather.skill.goods.SimpleGoodsInfo;
+import org.feather.skill.page.BasePage;
+import org.feather.skill.page.PagingInfo;
 import org.feather.skill.vo.PageSimpleGoodsInfo;
 
 import java.util.List;
@@ -36,12 +39,12 @@ public interface IGoodsService extends IService<Goods> {
 
     /**
      * description: 获取分页的商品信息
-     * @param page
+     * @param basePage 分页对象
      * @return {@link PageSimpleGoodsInfo}
      * @author: feather
      * @since: 2024-02-01 21:31
      **/
-    PageSimpleGoodsInfo getSimpleGoodsInfoByPage(int page);
+    Page<SimpleGoodsInfo> getSimpleGoodsInfoByPage(BasePage basePage);
 
    /**
     * description:  根据 TableId 查询简单商品信息
