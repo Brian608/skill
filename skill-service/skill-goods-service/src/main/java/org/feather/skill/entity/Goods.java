@@ -121,7 +121,7 @@ public class Goods extends Model<Goods> {
         goods.setGoodsStatus(GoodsStatusEnum.ONLINE.getStatus());  // 可以增加一个审核的过程
         goods.setPrice(goodsInfo.getPrice());
         goods.setSupply(goodsInfo.getSupply());
-        goods.setInventory(goodsInfo.getInventory());
+        goods.setInventory(goodsInfo.getSupply());
         goods.setGoodsProperty(
                 JSON.toJSONString(goodsInfo.getGoodsProperty())
         );

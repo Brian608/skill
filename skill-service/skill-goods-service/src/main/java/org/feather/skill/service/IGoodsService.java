@@ -8,7 +8,6 @@ import org.feather.skill.goods.DeductGoodsInventory;
 import org.feather.skill.goods.GoodsInfo;
 import org.feather.skill.goods.SimpleGoodsInfo;
 import org.feather.skill.page.BasePage;
-import org.feather.skill.page.PagingInfo;
 import org.feather.skill.vo.PageSimpleGoodsInfo;
 
 import java.util.List;

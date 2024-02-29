@@ -83,7 +83,11 @@ public class GoodsServiceImpl extends ServiceImpl<GoodsMapper, Goods> implements
         //获取商品的简单信息，可以从redis 中拿，拿不到从DB，并保存到redis中
         //redis 中的kv 都是字符串类型
         List<Object> goodIds = tableId.getIds().stream().map(i -> i.getId().toString()).collect(Collectors.toList());
-        List<Object> cachedSimpleGoodsInfos = redisTemplate.opsForHash().multiGet(GoodsConstant.SKILL_GOODS_DICT_KEY,goodIds);
+        //FIXME 如果 cache 中查不到 goodsId 对应的数据, 返回的是 null, [null, null]
+        List<Object> cachedSimpleGoodsInfos = redisTemplate.opsForHash().multiGet(GoodsConstant.SKILL_GOODS_DICT_KEY,goodIds)
+                .stream()
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());;
         // 如果从 Redis 中查到了商品信息, 分两种情况去操作
         if (CollectionUtils.isNotEmpty(cachedSimpleGoodsInfos)){
             //1：如果从缓存中查询出所需的SimpleGoodsInfo
