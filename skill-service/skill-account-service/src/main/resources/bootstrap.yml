@@ -7,6 +7,9 @@ spring:
   application:
     name: skill-account-service
   cloud:
+    alibaba:
+      seata:
+        tx-service-group: feather-skill-seata # seata 全局事务分组
     nacos:
       discovery:
         enabled: true # 如果不想使用 Nacos 进行服务注册和发现, 设置为 false 即可

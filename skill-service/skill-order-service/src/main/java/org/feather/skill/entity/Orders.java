@@ -12,16 +12,17 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * <p>
- * 用户账户余额表
- * </p>
- *
- * @author feather
- * @since 2024-01-25
+ * @projectName: skill
+ * @package: org.feather.skill.entity
+ * @className: Order
+ * @author: feather
+ * @description: 订单实体
+ * @since: 2024-03-30 16:48
+ * @version: 1.0
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Balance extends Model<Balance> {
+public class Orders extends Model<Orders> {
 
     private static final long serialVersionUID=1L;
 
@@ -37,9 +38,14 @@ public class Balance extends Model<Balance> {
     private Long userId;
 
     /**
-     * 账户余额
+     * 用户地址记录 id
      */
-    private Long balance;
+    private Long addressId;
+
+    /**
+     * 订单详情(json 存储, goodsId, count)
+     */
+    private String orderDetail;
 
     /**
      * 创建时间
@@ -52,6 +58,12 @@ public class Balance extends Model<Balance> {
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
+
+    public Orders(Long userId, Long addressId, String orderDetail){
+        this.userId=userId;
+        this.addressId=addressId;
+        this.orderDetail=orderDetail;
+    }
 
 
     @Override

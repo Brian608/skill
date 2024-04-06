@@ -16,6 +16,7 @@
         <module>skill-account-service</module>
         <module>skill-service-sdk</module>
         <module>skill-goods-service</module>
+        <module>skill-order-service</module>
     </modules>
 
 

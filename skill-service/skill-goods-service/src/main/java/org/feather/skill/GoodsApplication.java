@@ -2,9 +2,11 @@ package org.feather.skill;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.feather.skill.conf.DataSourceProxyAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
@@ -22,6 +24,7 @@ import java.net.UnknownHostException;
 @Slf4j
 @EnableDiscoveryClient
 @SpringBootApplication
+@Import(DataSourceProxyAutoConfiguration.class)
 public class GoodsApplication {
     public static void main(String[] args) throws UnknownHostException {
         SpringApplication app = new SpringApplication(GoodsApplication.class);

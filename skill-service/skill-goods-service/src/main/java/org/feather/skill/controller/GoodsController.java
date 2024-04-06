@@ -12,7 +12,6 @@ import org.feather.skill.goods.GoodsInfo;
 import org.feather.skill.goods.SimpleGoodsInfo;
 import org.feather.skill.page.BasePage;
 import org.feather.skill.service.IGoodsService;
-import org.feather.skill.vo.PageSimpleGoodsInfo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

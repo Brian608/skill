@@ -5,7 +5,9 @@ import org.apache.commons.lang.StringUtils;
 import org.feather.skill.conf.DataSourceProxyAutoConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
@@ -15,19 +17,21 @@ import java.net.UnknownHostException;
 /**
  * @projectName: skill
  * @package: org.feather.skill
- * @className: AccountApplication
+ * @className: OrderApplication
  * @author: feather
- * @description: 账户微服务
- * @since: 2024-01-23 20:30
+ * @description:
+ * @since: 2024-03-29 20:17
  * @version: 1.0
  */
 @Slf4j
-@EnableDiscoveryClient
+@EnableCircuitBreaker
 @SpringBootApplication
+@EnableFeignClients
+@EnableDiscoveryClient
 @Import(DataSourceProxyAutoConfiguration.class)
-public class AccountApplication {
+public class OrderApplication {
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(AccountApplication.class);
+        SpringApplication app = new SpringApplication(OrderApplication.class);
         Environment env = app.run(args).getEnvironment();
         String applicationName = env.getProperty("spring.application.name");
         String serverPort = env.getProperty("server.port");
@@ -51,4 +55,5 @@ public class AccountApplication {
                 externalUrl,
                 docUrl);
     }
+
 }
