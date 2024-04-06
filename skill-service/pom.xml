@@ -17,6 +17,7 @@
         <module>skill-service-sdk</module>
         <module>skill-goods-service</module>
         <module>skill-order-service</module>
+        <module>skill-logistics-service</module>
     </modules>
 
 
