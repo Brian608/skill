@@ -16,6 +16,7 @@
         <module>skill-generator</module>
         <module>skill-gateway</module>
         <module>skill-service</module>
+        <module>skill-sentinel-client</module>
     </modules>
 
     <parent>
