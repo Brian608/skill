@@ -1,0 +1,14 @@
+[
+  {
+    "apiName": "nacos-client-api",
+    "predicateItems": [
+      {
+        "pattern": "/feather/skill-nacos-client/nacos-client/project-config"
+      },
+      {
+        "pattern": "/feather/skill-nacos-client/**",
+        "matchStrategy": 1
+      }
+    ]
+  }
+]

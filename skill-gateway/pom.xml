@@ -30,11 +30,6 @@
             <artifactId>skill-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!-- 集成 Sentinel, 在网关层面实现限流 -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
         <!-- zipkin = spring-cloud-starter-sleuth + spring-cloud-sleuth-zipkin-->
 <!--        分布式日志配置start-->
 <!--        <dependency>-->
@@ -47,6 +42,12 @@
 <!--            <version>2.5.0.RELEASE</version>-->
 <!--        </dependency>-->
         <!--        分布式日志配置end-->
+
+        <!-- 集成 Sentinel, 在网关层面实现限流 -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>
